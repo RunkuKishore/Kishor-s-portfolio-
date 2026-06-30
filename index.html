@@ -2,7 +2,7 @@
 <html lang="en" data-theme="dark">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Runku Kishore — UI Developer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -386,8 +386,11 @@
 
   /* ── PROJECTS ──────────────────────────────────────────────── */
   #projects { background: var(--bg2); }
-  .projects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; }
-  .project-card {
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}  .project-card {
     background: var(--card-bg);
     border: 1px solid var(--border);
     border-radius: 14px;
@@ -575,7 +578,7 @@
     .contact-wrapper { grid-template-columns: 1fr; gap: 48px; }
     .form-row { grid-template-columns: 1fr; }
   }
-  @media (max-width: 640px) {
+  /* @media (max-width: 640px) {
     nav { padding: 14px 20px; }
     .nav-links { display: none; flex-direction: column; position: absolute; top: 64px; left: 0; right: 0; background: var(--bg2); border-bottom: 1px solid var(--border); padding: 20px; gap: 16px; }
     .nav-links.open { display: flex; }
@@ -584,7 +587,79 @@
     .hero-avatar-wrap { width: 220px; height: 220px; }
     .about-facts { grid-template-columns: 1fr; }
     .footer-inner { justify-content: center; text-align: center; }
-  }
+  } */
+   @media (max-width: 768px) {
+
+    .container{
+        width:100%;
+        max-width:100%;
+        padding:0 16px;
+    }
+
+    #hero{
+        min-height:auto;
+        padding:100px 0 60px;
+    }
+
+    .hero-inner{
+        display:flex;
+        flex-direction:column-reverse;
+        align-items:center;
+        text-align:center;
+        gap:32px;
+    }
+
+    .hero-text{
+        width:100%;
+    }
+
+    .hero-desc{
+        max-width:100%;
+        margin:0 auto 24px;
+    }
+
+    .hero-avatar-wrap{
+        width:220px;
+        height:220px;
+    }
+
+    .hero-title{
+        font-size:2.2rem;
+    }
+
+    .hero-cta{
+        justify-content:center;
+    }
+
+    .about-grid,
+    .skills-grid,
+    .projects-grid,
+    .contact-wrapper,
+    .form-row{
+        grid-template-columns:1fr;
+    }
+
+    .project-card,
+    .skill-category{
+        width:100%;
+    }
+
+    img{
+        max-width:100%;
+        height:auto;
+    }
+}
+  html,
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+    padding: 0 16px;
+}
 </style>
 </head>
 <body>
@@ -675,7 +750,7 @@
         </div>
         <div class="skill-bars">
           <div class="skill-bar-wrap">
-            <div class="skill-bar-header"><span class="skill-bar-name">React / Next.js</span><span class="skill-bar-pct">70%</span></div>
+            <div class="skill-bar-header"><span class="skill-bar-name">React</span><span class="skill-bar-pct">70%</span></div>
             <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="92"></div></div>
           </div>
           <div class="skill-bar-wrap">
